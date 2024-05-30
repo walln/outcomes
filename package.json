@@ -1,0 +1,26 @@
+{
+	"dependencies": {
+		"ts-pattern": "^5.1.2"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.7.3",
+		"tsup": "^8.0.2",
+		"typescript": "^5.4.5",
+		"vitest": "^1.6.0"
+	},
+	"scripts": {
+		"test": "vitest",
+		"build": "tsup",
+		"lint": "biome check .",
+		"format": "biome format ."
+	},
+	"type": "module",
+	"sideEffects": false,
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
+		},
+		"./dist/*": "./dist/*.js"
+	}
+}
