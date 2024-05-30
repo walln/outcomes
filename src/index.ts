@@ -2,4 +2,10 @@ export {
 	Result,
 	Ok,
 	Err,
-} from "./results";
+} from "./result";
+
+export {
+	Option,
+	Some,
+	None,
+} from "./option";
