@@ -1,7 +1,4 @@
 {
-	"dependencies": {
-		"ts-pattern": "^5.1.2"
-	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.7.3",
 		"tsup": "^8.0.2",
@@ -12,7 +9,8 @@
 		"test": "vitest",
 		"build": "tsup",
 		"lint": "biome check .",
-		"format": "biome format ."
+		"format": "biome format .",
+		"typecheck": "tsc --noEmit"
 	},
 	"type": "module",
 	"sideEffects": false,
