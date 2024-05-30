@@ -108,3 +108,19 @@ describe("Result async flat mapping", () => {
 		expect(mapped.err() && mapped.error).toBeInstanceOf(Error);
 	});
 });
+
+describe("Result conversion", () => {
+	it("should convert a Ok value to Some", () => {
+		const result = Ok(42);
+		const option = result.toOption();
+		expect(option.some()).toBe(true);
+		expect(option.unwrap()).toBe(42);
+	});
+
+	it("should convert a Err value to None", () => {
+		const result = Err(new Error("testing"));
+		const option = result.toOption();
+		expect(option.none()).toBe(true);
+		expect(option.unwrapOr(42)).toBe(42);
+	});
+});
