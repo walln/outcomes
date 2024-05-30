@@ -21,7 +21,7 @@ const getFnValue = <T>(df: ValueOrFn<T>) =>
  * Functor chaining for Options. Enables chaining of operations on the value regardless of its presence.
  * In the case of a Some value, the function is applied to the value. In the case of a None value, the function is not applied.
  */
-interface OptionFunctor<T> {
+export interface OptionFunctor<T> {
 	/**
 	 * Applies a function to the value of the option. If the option is a Some then the function is applied to the value, otherwise it ignores the function.
 	 *
@@ -73,7 +73,7 @@ interface OptionFunctor<T> {
 /**
  * Functor chaining for Some values.
  */
-interface SomeFunctor<T> extends OptionFunctor<T> {
+export interface SomeFunctor<T> extends OptionFunctor<T> {
 	/**
 	 * Applies a function to the value of the option. If the option is a Some then the function is applied to the value, otherwise it ignores the function.
 	 *
@@ -92,7 +92,7 @@ interface SomeFunctor<T> extends OptionFunctor<T> {
 /**
  * Functor chaining for None values.
  */
-interface NoneFunctor<T> extends OptionFunctor<T> {
+export interface NoneFunctor<T> extends OptionFunctor<T> {
 	/**
 	 * Applies a function to the value of the option. If the option is a Some then the function is applied to the value, otherwise it ignores the function.
 	 *
@@ -114,7 +114,7 @@ interface NoneFunctor<T> extends OptionFunctor<T> {
  *
  * @param T The type of the value.
  */
-interface Matchable<T> {
+export interface Matchable<T> {
 	/**
 	 * Matches on the value and performs the handler function.
 	 *

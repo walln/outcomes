@@ -98,7 +98,7 @@ export interface SuccessFunctor<T, E> extends ResultFunctor<T, E> {
 /**
  * Represents a value that can be converted to an Option.
  */
-interface Optional<T> {
+export interface Optional<T> {
 	/**
 	 * Converts the result into an Option
 	 *
@@ -122,7 +122,7 @@ interface Optional<T> {
  * Represents a value that can be pattern matched.
  * Matches on the existence of a value and performs the handler function.
  */
-interface Matchable<T, E> {
+export interface Matchable<T, E> {
 	/**
 	 * Matches on the value and performs the handler function.
 	 *
