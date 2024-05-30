@@ -1,8 +1,11 @@
 name: Publish
 on:
-  push:
-    branches:
+  workflow_run: 
+    workflows: ["CI"]
+    branches: 
       - main
+    types:
+      - completed
 
 jobs:
   publish:
